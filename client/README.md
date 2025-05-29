@@ -1,0 +1,3 @@
+# gqi
+
+GraphQL Inspector Plugin

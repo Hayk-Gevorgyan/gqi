@@ -1,0 +1,55 @@
+{
+  "manifest_version": 3,
+  "name": "GQI",
+  "description": "GraphQL inspector plugin",
+  "version": "1.2.0",
+  "devtools_page": "src/extension/devtools.html",
+  "permissions": [
+    "storage",
+    "clipboardRead",
+    "clipboardWrite"
+  ],
+  "content_scripts": [
+    {
+      "js": [
+        "src/extension/cs/websocket.ts"
+      ],
+      "world": "MAIN",
+      "run_at": "document_start",
+      "matches": [
+        "http://localhost/*",
+        "https://*.relcu.me/*"
+      ]
+    }
+  ],
+  "externally_connectable": {
+    "matches": [
+      "http://localhost/*",
+      "https://*.relcu.me/*"
+    ]
+  },
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "icons/16.png",
+      "24": "icons/24.png",
+      "32": "icons/32.png"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/extension/cs/websocket.js"
+      ],
+      "matches": [
+        "https://*/*"
+      ]
+    }
+  ],
+  "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCfkD6epSiikk0Lu42vsfQi671BV5yOiHG5OqHult0N+RWRct8X1O+zkyG7v0DIZt0eUl+uvkK9i36sB9iJglUaHh3hLuzoey4zHq6uu/RDd4i2aV2ByOatHDm/VDL6hk3orXhiB8rIduOip7dQrbBBXpbp0VecnZFbgGHJX+p8pwIDAQAB"
+}
