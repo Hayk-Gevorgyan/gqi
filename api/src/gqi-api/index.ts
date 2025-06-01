@@ -1,18 +1,23 @@
-import { GqiMessage, GqiOperationStage, GqiOperationStatus, GqiRequest, GqiResponse, GqiResponseType } from "./types"
+import GqiMessage from "./types/Message"
+import GqiOperationStage from "./types/OperationStage"
+import GqiOperationStatus from "./types/OperationStatus"
+import GqiRequest from "./types/Request"
+import GqiResponse from "./types/Response"
+import GqiResponseType from "./types/ResponseType"
 
 export class GQI {
 	private static readonly GQI_URL = "http://localhost:24000/messages"
 	private messages: GqiMessage[] = []
 	public readonly url: string
-	private isConnected: boolean = false
+	private isConnected: Promise<boolean>
 
 	constructor(url: string) {
 		this.url = url
-		this.init()
+		this.isConnected = this.init()
 	}
 
-	public subscribe(id: string, request: GqiRequest, timestamp?: number) {
-		if (!this.isConnected) return
+	public async subscribe(id: string, request: GqiRequest, timestamp?: number) {
+		if (!(await this.isConnected)) return
 		const message: GqiMessage = {
 			id,
 			request,
@@ -27,8 +32,8 @@ export class GQI {
 		return this.postMessage(message)
 	}
 
-	public next(id: string, response: GqiResponse, timestamp?: number) {
-		if (!this.isConnected) return
+	public async next(id: string, response: GqiResponse, timestamp?: number) {
+		if (!(await this.isConnected)) return
 		const message = this.messages.find((m) => m.id === id)
 		if (!message) return
 
@@ -44,8 +49,8 @@ export class GQI {
 		return this.postMessage(message)
 	}
 
-	public complete(id: string, timestamp?: number) {
-		if (!this.isConnected) return
+	public async complete(id: string, timestamp?: number) {
+		if (!(await this.isConnected)) return
 		const message = this.messages.find((m) => m.id === id)
 		if (!message) return
 
@@ -57,8 +62,8 @@ export class GQI {
 		return this.postMessage(message)
 	}
 
-	public close(id: string, timestamp?: number) {
-		if (!this.isConnected) return
+	public async close(id: string, timestamp?: number) {
+		if (!(await this.isConnected)) return
 		const message = this.messages.find((m) => m.id === id)
 		if (!message) return
 
@@ -71,7 +76,6 @@ export class GQI {
 	}
 
 	private async postMessage(message: GqiMessage) {
-		if (!this.isConnected) return
 		return fetch(GQI.GQI_URL, {
 			method: "POST",
 			headers: {
@@ -96,7 +100,7 @@ export class GQI {
 		}).catch((e) => console.log("Error fetching gqi", e))
 
 		if (response && response.ok) {
-			this.isConnected = true
-		}
+			return true
+		} else return false
 	}
 }
