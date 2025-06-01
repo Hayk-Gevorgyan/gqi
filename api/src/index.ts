@@ -61,14 +61,16 @@ const main = async () => {
 	// 	}
 	// }, 0)
 
-	mocks.forEach((m) => {
-		if (m.request) {
-			gqi.subscribe(m.id, m.request, m.t)
-		} else if (m.response) {
-			gqi.next(m.id, m.response, m.t)
-			gqi.complete(m.id, m.t + 1)
-		}
-	})
+	setTimeout(() => {
+		mocks.forEach((m) => {
+			if (m.request) {
+				gqi.subscribe(m.id, m.request, m.t)
+			} else if (m.response) {
+				gqi.next(m.id, m.response, m.t)
+				gqi.complete(m.id, m.t + 1)
+			}
+		})
+	}, 5000)
 }
 
 main()
