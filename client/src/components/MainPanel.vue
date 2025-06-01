@@ -54,6 +54,7 @@ function confirmServerAddress() {
 
 function confirmCollectAddress() {
 	settings.doCollect = true
+	settings.collectAddress = tempServerUrl.value
 }
 </script>
 

@@ -75,10 +75,10 @@ function watchServerAddress() {
 	watch(
 		() => settings.doCollect,
 		(doCollect) => {
-			const serverAddress = settings.serverAddress
-			if (!doCollect || !serverAddress) return
-			console.log("Collecting previous messages from", serverAddress)
-			obs.collect(serverAddress) //.catch(() => console.log("fetch failed for", newAddress))
+			const collectAddress = settings.collectAddress
+			if (!doCollect || !collectAddress) return
+			console.log("Collecting previous messages from", collectAddress)
+			obs.collect(collectAddress)
 			settings.doCollect = false
 		}
 	)

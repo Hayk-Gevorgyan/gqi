@@ -29,12 +29,14 @@ export const settings = toReactive(
 		newestSelected: boolean
 		serverAddress: string
 		isServerConnected: boolean
+		collectAddress: string
 		doCollect: boolean
 	}>("settings", {
 		sortOption: "newest",
 		newestSelected: false,
 		serverAddress: "",
 		isServerConnected: false,
+		collectAddress: "",
 		doCollect: false,
 	})
 )
