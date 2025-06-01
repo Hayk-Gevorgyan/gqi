@@ -5,7 +5,9 @@ import { InMemoryCache } from "@apollo/client/core"
 import IGqiObserver from "../interfaces/IGqiObserver"
 import IGqiOperation from "../interfaces/IGqiOperation"
 import GqiOperation from "./Operation"
-import { GqiOperationStage, GqiMessage, GqiOperationStatus } from "../types"
+import GqiOperationStage from "~/types/OperationStage"
+import GqiOperationStatus from "~/types/OperationStatus"
+import GqiMessage from "~/types/Message"
 import { entries, settings } from "~/composables/store"
 
 const OBSERVE_QUERY = gql`

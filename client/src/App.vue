@@ -13,6 +13,7 @@ import Response from "./components/Response.vue"
 import Variables from "./components/Variables.vue"
 import { entries } from "./composables/store"
 import { settings } from "./composables/store"
+import { Entry } from "./types/Entry"
 
 const activeId = ref()
 const variablesSize = ref(0)
@@ -20,7 +21,7 @@ const queryRef = ref<any>(null)
 const variablesRef = ref<any>(null)
 const responseRef = ref<any>(null)
 
-const active = computed(() => entries.flat().find((item) => item?.id === activeId.value))
+const active = computed<Entry>(() => entries.flat().find((item: Entry) => item?.id === activeId.value))
 
 const bps = useBreakpoints(breakpointsTailwind)
 

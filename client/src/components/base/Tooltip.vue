@@ -1,10 +1,11 @@
 <script lang="ts" setup>
 import { TooltipArrow, TooltipContent, TooltipPortal, TooltipProvider, TooltipRoot, TooltipTrigger } from "radix-vue"
+import { TooltipSide } from "~/types"
 
 withDefaults(
 	defineProps<{
 		content?: string
-		side?: "top" | "bottom" | "left" | "right"
+		side?: TooltipSide
 	}>(),
 	{
 		side: "top",

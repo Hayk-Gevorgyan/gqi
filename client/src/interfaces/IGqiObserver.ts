@@ -1,6 +1,6 @@
 import { ApolloClient } from "@apollo/client/core"
 import IGqiOperation from "./IGqiOperation"
-import { GqiMessage } from "../types"
+import GqiMessage from "../types/Message"
 
 interface IGqiObserver {
 	client?: ApolloClient<any>

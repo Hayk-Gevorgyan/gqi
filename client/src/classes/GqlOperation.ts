@@ -1,5 +1,5 @@
 import { getOperationAST, parse } from "graphql"
-import type { Entry } from "~/types"
+import type { Entry } from "~/types/Entry"
 
 export default class GqlOperation {
 	id: string

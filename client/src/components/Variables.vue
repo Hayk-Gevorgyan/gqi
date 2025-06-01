@@ -2,7 +2,7 @@
 import { useResizeObserver } from "@vueuse/core"
 import { computed } from "vue"
 import { ref } from "vue"
-import type { Entry } from "~/types"
+import type { Entry } from "~/types/Entry"
 import { isGQLEntry } from "~/utils"
 import { formatData } from "~/utils"
 import Table from "./base/Table.vue"

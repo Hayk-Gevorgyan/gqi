@@ -1,5 +1,8 @@
-import { Entry } from "../types"
-import { GqiRequest, GqiResponse, GqiOperationStage, GqiOperationStatus } from "../types"
+import { Entry } from "~/types/Entry"
+import GqiRequest from "~/types/Request"
+import GqiResponse from "~/types/Response"
+import GqiOperationStage from "~/types/OperationStage"
+import GqiOperationStatus from "~/types/OperationStatus"
 
 interface IGqiOperation {
 	id: string

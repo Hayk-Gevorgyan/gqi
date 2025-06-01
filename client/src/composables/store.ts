@@ -2,7 +2,7 @@ import { useColorMode } from "@vueuse/core"
 import { toReactive } from "@vueuse/core"
 import { reactive } from "vue"
 import { useStorageLocal } from "~/composables/storageLocal"
-import type { Entry } from "~/types"
+import type { Entry } from "~/types/Entry"
 
 export const entries = reactive<Entry[]>([])
 

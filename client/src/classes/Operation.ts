@@ -1,7 +1,10 @@
-import { Entry } from "../types"
+import { Entry } from "~/types/Entry"
 import { getOperationAST, parse } from "graphql"
 import IGqiOperation from "../interfaces/IGqiOperation"
-import { GqiRequest, GqiResponse, GqiOperationStatus, GqiOperationStage } from "../types"
+import GqiRequest from "~/types/Request"
+import GqiResponse from "~/types/Response"
+import GqiOperationStage from "~/types/OperationStage"
+import GqiOperationStatus from "~/types/OperationStatus"
 
 class GqiOperation implements IGqiOperation {
 	id: string

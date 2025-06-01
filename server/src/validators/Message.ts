@@ -18,7 +18,6 @@ export const isGqiMessage = (message: any): GqiMessage | undefined => {
 		!isGqiOperationStatus(message.status) ||
 		typeof message.isError !== "boolean"
 	) {
-		console.log("is not gqi message")
 		return undefined
 	}
 

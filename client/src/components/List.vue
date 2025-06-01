@@ -5,7 +5,8 @@ import { createReusableTemplate } from "@vueuse/core"
 import { ref } from "vue"
 import { settings } from "~/composables/store"
 import { TYPE_COLORS } from "~/constants"
-import type { Entry } from "~/types"
+import type { ButtonGroupItem } from "~/types"
+import { Entry } from "~/types/Entry"
 import ButtonGroup from "./base/ButtonGroup.vue"
 import Input from "./base/Input.vue"
 import Tooltip from "./base/Tooltip.vue"
@@ -19,7 +20,7 @@ const keyword = ref("")
 const activeView = ref<"all" | "query" | "mutation" | "subscription">("all")
 const activeStatus = ref<"all" | "pending" | "failed" | "completed">("all")
 const lastCleared = ref(0)
-const viewButtons = ref([
+const viewButtons = ref<ButtonGroupItem[]>([
 	{
 		title: "✱",
 		name: "all",
@@ -41,7 +42,7 @@ const viewButtons = ref([
 		label: "Subscriptions",
 	},
 ])
-const statusButtons = ref([
+const statusButtons = ref<ButtonGroupItem[]>([
 	{
 		title: "✱",
 		name: "all",
@@ -64,7 +65,7 @@ const statusButtons = ref([
 	},
 ])
 
-const filtered = useArrayFilter(
+const filtered = useArrayFilter<Entry>(
 	() => entries,
 	(entry: Entry) => {
 		const _entry = entry
@@ -77,7 +78,7 @@ const filtered = useArrayFilter(
 		)
 	}
 )
-const sorted = useSorted(filtered, (a: any, b: any) => {
+const sorted = useSorted(filtered, (a: Entry, b: Entry) => {
 	if (settings.sortOption !== "newest") {
 		if (a.timestamp == b.timestamp) {
 			return a.sequence - b.sequence

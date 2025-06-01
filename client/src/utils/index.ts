@@ -11,13 +11,8 @@ import type { Header, Param } from "har-format"
 import httpStatus from "http-status"
 import htmlParser from "prettier/parser-html"
 import prettier from "prettier/standalone"
-import { getQuery, parseURL } from "ufo"
 import { randomUUID } from "uncrypto"
-import type { BaseEntry } from "~/types"
-import type { Entry } from "~/types"
-import type { GQLEntry } from "~/types"
-import type { HAREntry } from "~/types"
-import type { HTTPEntry } from "~/types"
+import type { BaseEntry, Entry, GQLEntry, HAREntry } from "~/types/Entry"
 
 class ParseResponseError extends Error {
 	constructor(message = "Cant't parse response content") {
@@ -135,43 +130,6 @@ export function isGraphQL(entry: HAREntry) {
 	}
 
 	return !!query && isValidQuery(query)
-}
-
-export async function parseHTTPEntry(entry: HAREntry): Promise<HTTPEntry> {
-	const { url, method, postData } = entry.request
-	const { host, pathname, search: queryString } = parseURL(url)
-	const { request, response, ...base } = getEntryInfo(entry)
-
-	let body
-	let params
-
-	if (postData) {
-		if (postData.params) {
-			params = postData.params
-		} else if (postData.text) {
-			body = JSON.parse(postData.text)
-		}
-	}
-	const responseBody = await getContent(entry)
-
-	return {
-		type: method,
-		...base,
-		request: {
-			...request,
-			name: pathname,
-			host,
-			pathname,
-			queryString,
-			query: getQuery(queryString),
-			body,
-			params,
-		},
-		response: {
-			...response,
-			body: responseBody,
-		},
-	}
 }
 
 function isArray(arr: any): arr is any[] {
