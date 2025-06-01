@@ -1,4 +1,4 @@
-import type { Entry as _HAREntry, Header, Param } from "har-format"
+import type { Entry as _HAREntry, Header } from "har-format"
 
 export interface HAREntry extends _HAREntry {
 	_resourceType: "xhr" | "fetch" | "preflight"
@@ -28,26 +28,6 @@ export interface BaseEntry {
 	timestamp: number
 	request: BaseEntryRequest
 	response: BaseEntryResponse
-}
-
-interface HTTPEntryRequest extends BaseEntryRequest {
-	name: string
-	host?: string
-	pathname: string
-	queryString: string
-	query: any
-	body: any
-	params?: Param[]
-}
-
-interface HTTPEntryResponse extends BaseEntryResponse {
-	body: any
-}
-
-export interface HTTPEntry extends BaseEntry {
-	type: string
-	request: HTTPEntryRequest
-	response: HTTPEntryResponse
 }
 
 interface GQLEntryRequest extends BaseEntryRequest {
