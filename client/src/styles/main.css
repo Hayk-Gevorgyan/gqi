@@ -4,46 +4,46 @@
 @import "./all.css";
 
 .main-panel {
-  border-right-width: 1px;
-  border-bottom-width: 0;
-  flex-direction: column;
-  width: 2.5rem;
-  height: auto;
-  background-color: var(--un-preset-radix-gray2);
-  border-color: var(--un-preset-radix-gray4);
-  justify-content: space-between;
-  display: flex;
+	border-right-width: 1px;
+	border-bottom-width: 0;
+	flex-direction: column;
+	width: 2.5rem;
+	height: auto;
+	background-color: var(--un-preset-radix-gray2);
+	border-color: var(--un-preset-radix-gray4);
+	justify-content: space-between;
+	display: flex;
 }
 .operation-item {
-  display: flex;
-  .name {
-    flex: auto;
-    overflow: hidden;
-    align-items: center;
-    display: flex;
-  }
-  .counter {
-    display: flex;
-    /*background-color: rgba(39, 39, 39, 0.42);*/
-    padding: 0.1rem 0.4rem;
-    border-radius: 0.25rem;
-    color: white;
-    min-width: 1.5rem;
-    justify-content: center;
-    font-size: 0.7rem;
-    font-weight: 700;
-    &.pending {
-      color: #3979ff;
-    }
-    &.canceled {
-      color: #8e8e8e55;
-    }
-    &.completed {
-      color: green;
-      /*background-color: rgb(15 37 4);*/
-    }
-    &.failed {
-      color: rgb(141 35 35);
-    }
-  }
+	display: flex;
+	.name {
+		flex: auto;
+		overflow: hidden;
+		align-items: center;
+		display: flex;
+	}
+	.counter {
+		display: flex;
+		/*background-color: rgba(39, 39, 39, 0.42);*/
+		padding: 0.1rem 0.4rem;
+		border-radius: 0.25rem;
+		color: white;
+		min-width: 1.5rem;
+		justify-content: center;
+		font-size: 0.7rem;
+		font-weight: 700;
+		&.pending {
+			color: #3979ff;
+		}
+		&.canceled {
+			color: #8e8e8e55;
+		}
+		&.completed {
+			color: green;
+			/*background-color: rgb(15 37 4);*/
+		}
+		&.failed {
+			color: rgb(141 35 35);
+		}
+	}
 }

@@ -6,10 +6,10 @@
 *,
 ::before,
 ::after {
-  box-sizing: border-box; /* 1 */
-  border-width: 0; /* 2 */
-  border-style: solid; /* 2 */
-  border-color: #e5e7eb; /* 2 */
+	box-sizing: border-box; /* 1 */
+	border-width: 0; /* 2 */
+	border-style: solid; /* 2 */
+	border-color: #e5e7eb; /* 2 */
 }
 
 /*
@@ -20,9 +20,9 @@
 */
 
 html {
-  line-height: 1.5; /* 1 */
-  tab-size: 4; /* 3 */
-  font-family: ui-sans-serif, system-ui;
+	line-height: 1.5; /* 1 */
+	tab-size: 4; /* 3 */
+	font-family: ui-sans-serif, system-ui;
 }
 
 /*
@@ -31,8 +31,8 @@ html {
 */
 
 body {
-  margin: 0; /* 1 */
-  line-height: inherit; /* 2 */
+	margin: 0; /* 1 */
+	line-height: inherit; /* 2 */
 }
 
 /*
@@ -42,9 +42,9 @@ body {
 */
 
 hr {
-  height: 0; /* 1 */
-  color: inherit; /* 2 */
-  border-top-width: 1px; /* 3 */
+	height: 0; /* 1 */
+	color: inherit; /* 2 */
+	border-top-width: 1px; /* 3 */
 }
 
 /*
@@ -52,7 +52,7 @@ Add the correct text decoration in Chrome, Edge, and Safari.
 */
 
 abbr:where([title]) {
-  text-decoration: underline dotted;
+	text-decoration: underline dotted;
 }
 
 /*
@@ -65,8 +65,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: inherit;
-  font-weight: inherit;
+	font-size: inherit;
+	font-weight: inherit;
 }
 
 /*
@@ -74,8 +74,8 @@ Reset links to optimize for opt-in styling instead of opt-out.
 */
 
 a {
-  color: inherit;
-  text-decoration: inherit;
+	color: inherit;
+	text-decoration: inherit;
 }
 
 /*
@@ -84,7 +84,7 @@ Add the correct font weight in Edge and Safari.
 
 b,
 strong {
-  font-weight: bolder;
+	font-weight: bolder;
 }
 
 /*
@@ -96,8 +96,8 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
-  font-size: 1em; /* 2 */
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
+	font-size: 1em; /* 2 */
 }
 
 /*
@@ -105,7 +105,7 @@ Add the correct font size in all browsers.
 */
 
 small {
-  font-size: 80%;
+	font-size: 80%;
 }
 
 /*
@@ -114,18 +114,18 @@ Prevent `sub` and `sup` elements from affecting the line height in all browsers.
 
 sub,
 sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
 }
 
 sub {
-  bottom: -0.25em;
+	bottom: -0.25em;
 }
 
 sup {
-  top: -0.5em;
+	top: -0.5em;
 }
 
 /*
@@ -135,9 +135,9 @@ sup {
 */
 
 table {
-  text-indent: 0; /* 1 */
-  border-color: inherit; /* 2 */
-  border-collapse: collapse; /* 3 */
+	text-indent: 0; /* 1 */
+	border-color: inherit; /* 2 */
+	border-collapse: collapse; /* 3 */
 }
 
 /*
@@ -151,13 +151,13 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  font-weight: inherit; /* 1 */
-  line-height: inherit; /* 1 */
-  color: inherit; /* 1 */
-  margin: 0; /* 2 */
-  padding: 0; /* 3 */
+	font-family: inherit; /* 1 */
+	font-size: 100%; /* 1 */
+	font-weight: inherit; /* 1 */
+	line-height: inherit; /* 1 */
+	color: inherit; /* 1 */
+	margin: 0; /* 2 */
+	padding: 0; /* 3 */
 }
 
 /*
@@ -166,7 +166,7 @@ Remove the inheritance of text transform in Edge and Firefox.
 
 button,
 select {
-  text-transform: none;
+	text-transform: none;
 }
 
 /*
@@ -175,12 +175,13 @@ select {
 */
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
-  -webkit-appearance: button; /* 1 */
-  background-color: transparent; /* 2 */
-  background-image: none; /* 2 */
+[type="button"],
+[type="reset"],
+[type="submit"] {
+	-webkit-appearance: button; /* 1 */
+	appearance: button;
+	background-color: transparent; /* 2 */
+	background-image: none; /* 2 */
 }
 
 /*
@@ -188,7 +189,7 @@ Use the modern Firefox focus style for all focusable elements.
 */
 
 :-moz-focusring {
-  outline: auto;
+	outline: auto;
 }
 
 /*
@@ -196,7 +197,7 @@ Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/
 */
 
 :-moz-ui-invalid {
-  box-shadow: none;
+	box-shadow: none;
 }
 
 /*
@@ -204,7 +205,7 @@ Add the correct vertical alignment in Chrome and Firefox.
 */
 
 progress {
-  vertical-align: baseline;
+	vertical-align: baseline;
 }
 
 /*
@@ -213,7 +214,7 @@ Correct the cursor style of increment and decrement buttons in Safari.
 
 ::-webkit-inner-spin-button,
 ::-webkit-outer-spin-button {
-  height: auto;
+	height: auto;
 }
 
 /*
@@ -221,9 +222,10 @@ Correct the cursor style of increment and decrement buttons in Safari.
 2. Correct the outline style in Safari.
 */
 
-[type='search'] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
+[type="search"] {
+	-webkit-appearance: textfield; /* 1 */
+	appearance: textfield;
+	outline-offset: -2px; /* 2 */
 }
 
 /*
@@ -231,7 +233,7 @@ Remove the inner padding in Chrome and Safari on macOS.
 */
 
 ::-webkit-search-decoration {
-  -webkit-appearance: none;
+	-webkit-appearance: none;
 }
 
 /*
@@ -240,8 +242,8 @@ Remove the inner padding in Chrome and Safari on macOS.
 */
 
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
+	-webkit-appearance: button; /* 1 */
+	font: inherit; /* 2 */
 }
 
 /*
@@ -249,7 +251,7 @@ Add the correct display in Chrome and Safari.
 */
 
 summary {
-  display: list-item;
+	display: list-item;
 }
 
 /*
@@ -269,24 +271,24 @@ hr,
 figure,
 p,
 pre {
-  margin: 0;
+	margin: 0;
 }
 
 fieldset {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 legend {
-  padding: 0;
+	padding: 0;
 }
 
 ol,
 ul,
 menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 /*
@@ -294,7 +296,7 @@ Prevent resizing textareas horizontally by default.
 */
 
 textarea {
-  resize: vertical;
+	resize: vertical;
 }
 
 /*
@@ -304,8 +306,8 @@ textarea {
 
 input::placeholder,
 textarea::placeholder {
-  opacity: 1; /* 1 */
-  color: #9ca3af; /* 2 */
+	opacity: 1; /* 1 */
+	color: #9ca3af; /* 2 */
 }
 
 /*
@@ -314,14 +316,14 @@ Set the default cursor for buttons.
 
 button,
 [role="button"] {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 /*
 Make sure disabled buttons don't get the pointer cursor.
 */
 :disabled {
-  cursor: default;
+	cursor: default;
 }
 
 /*
@@ -338,8 +340,8 @@ audio,
 iframe,
 embed,
 object {
-  display: block; /* 1 */
-  vertical-align: middle; /* 2 */
+	display: block; /* 1 */
+	/*vertical-align: middle; /* 2 */
 }
 
 /*
@@ -348,8 +350,8 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
 
 img,
 video {
-  max-width: 100%;
-  height: auto;
+	max-width: 100%;
+	height: auto;
 }
 /*
 ------------
@@ -357,118 +359,122 @@ video {
 html,
 body,
 #app {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  /* font-family: SourceSansPro, sans-serif; */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	/* font-family: SourceSansPro, sans-serif; */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 html {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+	font-family:
+		system-ui,
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		Roboto;
 }
 body {
-  margin: 0;
-  line-height: inherit
+	margin: 0;
+	line-height: inherit;
 }
 ::-webkit-scrollbar-track {
-  @apply bg-transparent;
-  @apply border-solid border-l border-gray3 border-t-0 border-b-0 border-r-0;
+	@apply bg-transparent;
+	@apply border-solid border-l border-gray3 border-t-0 border-b-0 border-r-0;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-clip-content bg-gray3 rounded border-solid border-transparent border-4;
-  @apply hover:bg-gray6 hover:bg-clip-content;
+	@apply bg-clip-content bg-gray3 rounded border-solid border-transparent border-4;
+	@apply hover:bg-gray6 hover:bg-clip-content;
 }
 
 ::-webkit-scrollbar {
-  @apply w-4;
-  @apply h-0;
+	@apply w-4;
+	@apply h-0;
 }
 
 :root {
-  --font-mono: "Roboto Mono Variable", monospace;
-  --font-size-body: 0.75rem;
-  --font-size-tiny: 0.688rem;
-  --line-height-body: 1rem;
+	--font-mono: "Roboto Mono Variable", monospace;
+	--font-size-body: 0.75rem;
+	--font-size-tiny: 0.688rem;
+	--line-height-body: 1rem;
 
-  --accent-color: theme("colors.indigo.500");
-  --accent-light-color: theme("colors.indigo.400");
-  --accent-dark-color: theme("colors.indigo.600");
-  --accent-contrast-color: theme("colors.white");
-  --gradient-from-color: theme("colors.indigo.200");
-  --gradient-via-color: theme("colors.indigo.400");
+	--accent-color: theme("colors.indigo.500");
+	--accent-light-color: theme("colors.indigo.400");
+	--accent-dark-color: theme("colors.indigo.600");
+	--accent-contrast-color: theme("colors.white");
+	--gradient-from-color: theme("colors.indigo.200");
+	--gradient-via-color: theme("colors.indigo.400");
 
-  --primary-color: theme("colors.white");
-  --primary-light-color: theme("colors.gray.50");
-  --primary-dark-color: theme("colors.gray.100");
-  --primary-contrast-color: theme("colors.light.50");
+	--primary-color: theme("colors.white");
+	--primary-light-color: theme("colors.gray.50");
+	--primary-dark-color: theme("colors.gray.100");
+	--primary-contrast-color: theme("colors.light.50");
 
-  --secondary-color: theme("colors.gray.500");
-  --secondary-light-color: theme("colors.gray.400");
-  --secondary-dark-color: theme("colors.gray.900");
+	--secondary-color: theme("colors.gray.500");
+	--secondary-light-color: theme("colors.gray.400");
+	--secondary-dark-color: theme("colors.gray.900");
 
-  --divider-color: theme("colors.gray.100");
-  --divider-light-color: theme("colors.gray.100");
-  --divider-dark-color: theme("colors.gray.300");
+	--divider-color: theme("colors.gray.100");
+	--divider-light-color: theme("colors.gray.100");
+	--divider-dark-color: theme("colors.gray.300");
 
-  --error-color: theme("colors.yellow.100");
-  --tooltip-color: theme("colors.neutral.800");
-  --popover-color: theme("colors.white");
+	--error-color: theme("colors.yellow.100");
+	--tooltip-color: theme("colors.neutral.800");
+	--popover-color: theme("colors.white");
 
-  --editor-type-color: theme("colors.purple.600");
-  --editor-name-color: theme("colors.red.600");
-  --editor-operator-color: theme("colors.indigo.600");
-  --editor-invalid-color: theme("colors.red.600");
-  --editor-separator-color: theme("colors.gray.600");
-  --editor-meta-color: theme("colors.gray.600");
-  --editor-variable-color: theme("colors.green.600");
-  --editor-link-color: theme("colors.cyan.600");
-  --editor-process-color: theme("colors.blue.600");
-  --editor-constant-color: theme("colors.fuchsia.600");
-  --editor-keyword-color: theme("colors.pink.600");
+	--editor-type-color: theme("colors.purple.600");
+	--editor-name-color: theme("colors.red.600");
+	--editor-operator-color: theme("colors.indigo.600");
+	--editor-invalid-color: theme("colors.red.600");
+	--editor-separator-color: theme("colors.gray.600");
+	--editor-meta-color: theme("colors.gray.600");
+	--editor-variable-color: theme("colors.green.600");
+	--editor-link-color: theme("colors.cyan.600");
+	--editor-process-color: theme("colors.blue.600");
+	--editor-constant-color: theme("colors.fuchsia.600");
+	--editor-keyword-color: theme("colors.pink.600");
 }
 
 .dark-theme {
-  --primary-color: theme("colors.dark.800");
-  --primary-light-color: theme("colors.dark.600");
-  --primary-dark-color: theme("colors.neutral.800");
-  --primary-contrast-color: theme("colors.neutral.900");
+	--primary-color: theme("colors.dark.800");
+	--primary-light-color: theme("colors.dark.600");
+	--primary-dark-color: theme("colors.neutral.800");
+	--primary-contrast-color: theme("colors.neutral.900");
 
-  --secondary-color: theme("colors.neutral.400");
-  --secondary-light-color: theme("colors.neutral.500");
-  --secondary-dark-color: theme("colors.neutral.50");
+	--secondary-color: theme("colors.neutral.400");
+	--secondary-light-color: theme("colors.neutral.500");
+	--secondary-dark-color: theme("colors.neutral.50");
 
-  --divider-color: theme("colors.neutral.800");
-  --divider-light-color: theme("colors.dark.500");
-  --divider-dark-color: theme("colors.dark.300");
+	--divider-color: theme("colors.neutral.800");
+	--divider-light-color: theme("colors.dark.500");
+	--divider-dark-color: theme("colors.dark.300");
 
-  --error-color: theme("colors.stone.800");
-  --tooltip-color: theme("colors.neutral.100");
-  --popover-color: theme("colors.dark.700");
+	--error-color: theme("colors.stone.800");
+	--tooltip-color: theme("colors.neutral.100");
+	--popover-color: theme("colors.dark.700");
 
-  --editor-type-color: theme("colors.purple.400");
-  --editor-name-color: theme("colors.blue.400");
-  --editor-operator-color: theme("colors.indigo.400");
-  --editor-invalid-color: theme("colors.red.400");
-  --editor-separator-color: theme("colors.gray.400");
-  --editor-meta-color: theme("colors.gray.400");
-  --editor-variable-color: theme("colors.green.400");
-  --editor-link-color: theme("colors.cyan.400");
-  --editor-process-color: theme("colors.fuchsia.400");
-  --editor-constant-color: theme("colors.violet.400");
-  --editor-keyword-color: theme("colors.pink.400");
+	--editor-type-color: theme("colors.purple.400");
+	--editor-name-color: theme("colors.blue.400");
+	--editor-operator-color: theme("colors.indigo.400");
+	--editor-invalid-color: theme("colors.red.400");
+	--editor-separator-color: theme("colors.gray.400");
+	--editor-meta-color: theme("colors.gray.400");
+	--editor-variable-color: theme("colors.green.400");
+	--editor-link-color: theme("colors.cyan.400");
+	--editor-process-color: theme("colors.fuchsia.400");
+	--editor-constant-color: theme("colors.violet.400");
+	--editor-keyword-color: theme("colors.pink.400");
 }
 
 .cm-editor {
-  .cm-line::selection {
-    background-color: var(--accent-dark-color) !important;
-    color: var(--accent-contrast-color) !important;
-  }
+	.cm-line::selection {
+		background-color: var(--accent-dark-color) !important;
+		color: var(--accent-contrast-color) !important;
+	}
 
-  .cm-line ::selection {
-    background-color: var(--accent-dark-color) !important;
-    color: var(--accent-contrast-color) !important;
-  }
+	.cm-line ::selection {
+		background-color: var(--accent-dark-color) !important;
+		color: var(--accent-contrast-color) !important;
+	}
 }
-
